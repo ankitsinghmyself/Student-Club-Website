@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>MCA Student Clubs</title>
+	<meta author="Ankit Singh">
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //for-mobile-apps -->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<!-- //js -->
+	<!-- font-awesome icons -->
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<!-- //font-awesome icons -->
+	<link href="//fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i"
+	 rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+	<!-- chat bot
+	<script type="text/javascript">
+		(function (d, m) {
+			var o = { "appId": "3f08b3ab55bd1c4553a90af09bec87733", "conversationTitle": "Ankit Singh", "email": "" };
+			var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+			s.src = "https://api.kommunicate.io/kommunicate.app";
+			var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+			window.kommunicate = m; m._globals = o;
+		})(document, window.kommunicate || {});
+	</script>-->
+
+	<!--gallery-->
+	<style>
+		* {
+						box-sizing: border-box;
+					}
+					
+					.cmr1 {
+						padding: 1px;
+						background-color: green;
+						transition: transform .2s;
+						width: 200px;
+						height: 200px;
+						margin: 0 auto;
+					}
+					
+					.cmr1:hover {
+						-ms-transform: scale(1.5); /* IE 9 */
+						-webkit-transform: scale(1.5); /* Safari 3-8 */
+						transform: scale(1.5); 
+					}
+					/*event buttons*/
+					input#prev:hover,#next:hover{
+						color:white;
+						background-color: green;
+
+					}
+					.quotes{
+						text-align: center;
+					}
+					.quotes1{
+						text-align: center;
+					}
+					h2{
+						text-align: center;
+					}
+					/*///button/////*/
+
+	</style>
+	<!--//gallery-->
+	<script>
+		$(function () {
+			var quotes = $(".quotes");
+			var quoteIndex = -1;
+
+			function showQuote(change) {
+				quoteIndex += change;
+				if (quoteIndex < 0) {
+					quoteIndex += quotes.length;
+				}
+				else if (quoteIndex >= quotes.length) {
+					quoteIndex -= quotes.length;
+				}
+				quotes.stop(true, true).hide().eq(quoteIndex)
+					.fadeIn(200)
+					.delay(200000)
+					.fadeOut(20000)
+					.queue(function () { showQuote(1); });
+			}
+			showQuote(1);
+
+			$('#prev').on('click', function () {
+				showQuote(-1);
+			});
+
+			$('#next').on('click', function () {
+				showQuote(1);
+			});
+		});
+	</script>
+
+</head>
+
+<body>
+	<div class="nav-links">
+		<nav class="navbar navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar">d</span>
+						<span class="icon-bar"></span>
+					</button>
+
+					<a href="index.html">
+						<div class="col-md-6 w3l-about-img">
+							<img src="images/about1.jpg" alt="logo" style="size:1cm">
+						</div>
+					</a>
+				</div>
+				<div id="myNavbar">
+					<ul class="nav navbar-nav link-effect">
+						<li class="active">
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="#events" class="scroll">Events</a>
+						</li>
+						<li>
+							<a href="#about" class="scroll">about</a>
+						</li>
+						<li>
+							<a href="#gallery" class="scroll">gallery</a>
+						</li>
+						<li>
+							<a href="#contact" class="scroll">Contact</a>
+						</li>
+						<li>
+							<a href="http://www.cmrit.ac.in/student-clubs/">Other Clubs</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<!-- /navigation -->
+	<hr style=" border-width: 3px; border-style: inset;">
+	<!-- //header -->
+
+	<!-- banner -->
+	<div class="banner">
+		<div class="container">
+			<div class="events-agileits-title">
+				<h3>Club Details</h3>
+			</div>
+			<hr style=" border-width: 3px; border-style: inset;">
+			<table style="background-color: rgb(103, 139, 46);width: 100%; ">
+				<tr>
+					<td colspan="2">
+
+						<!--<strong style="font-size:3em;">Club Details</strong>-->
+						<br> The Student Branch of Computer Society of India, conducts events, competitions and workshops to promote
+						advancement
+						in the field of Computer Science.
+						<br>
+						<br>
+						<br>
+					</td>
+				</tr>
+				<tr>
+					<td><strong style="font-size: 2em;">Student Coordinators</strong><br>
+						<strong style="font-size: 1.5em;">Technical Club (Protocol)</strong>
+						
+						<br>Astha Singh
+						<br>astha050717singh@gmail.com
+						<br>8112423232<br><br>
+						<!--<strong style="font-size: 1.5em;">Newsletter Club</strong><br>
+						<br> Subhashini R R
+						<br>subhashiniravi05@gmail.com
+						<br>9739792116-->
+					</td>
+					<td>
+						<strong style="font-size: 2em;">Faculty Coordinators</strong>
+						<br>Ms. Moumita Roy 
+						<br>moumita.r@cmrit.ac.in 
+						<br>9830094060 <br>
+						<br>
+						<strong style="font-size: 2em;">Student Branch Counselor</strong><br>
+						<span>Gomathi T, MCA Dept.</span>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!-- //banner -->
+	<!--events-->
+	<div class="events" id="events">
+		<div class="container">
+			<div class="events-agileits-title">
+				<h3>Events</h3>
+			</div>
+			<hr style=" border-width: 3px; border-style: inset;">
+			<table>
+				<tr>
+
+					<td style="width:100%;position:static; ">
+						<h2 style="color:green">Completed Events Details</h2>
+
+						<h4 class="quotes">
+							<b>Event Name:</b> <br>
+							SDP - Peer Learning - Tableau - Sem 4 - Section A <br>
+							SDP - Peer Learning - Tableau - Sem 4 - Section B <br>
+							<b>Date:</b>
+							19-02-2018 <br>
+							<b>Designation:</b>
+							Students <br>
+							<b>Number of Students attended:</b>
+							37,30 <br>
+							<b>Status:</b>
+							Completed(11:30PM to 1PM) &
+							Completed(1:15PM - 2:45PM)
+						</h4>
+						<h4 class="quotes"><b>Event Name:</b> <br>
+							Preparation for Technical Fest- Resolution 2018 <br>
+							<b>Date:</b>21-02-2018 <br>
+							<b>Designation:</b>Students <br>
+							<b>Number of Students attended:</b>50 <br>
+							<b>Status:</b> Completed<br></h4>
+
+
+						<h4 class="quotes"><b>Event Name:</b> <br>
+							SDP - Peer Learning - Tableau - Sem 4 <br>
+							<b>Date:</b>28-02-2018 <br>
+							<b>Designation:</b>Students <br>
+							<b>Number of Students attended:</b>80<br>
+							<b>Status:</b>Completed</h4>
+						<h4 class="quotes"><b>Event Name:</b> <br>
+							Mini Project Evaluation <br>
+							<b>Date:</b>03-03-2018 <br>
+							<b>Designation:</b>Students <br>
+							<b>Number of Students attended:</b><br>
+							<b>Status:</b>Completed</h4>
+						<h4 class="quotes"><b>Event Name:</b> <br>
+							Technical Report Writing Contest <br>
+							<b>Date:</b>19-03-2018 <br>
+							<b>Designation:</b>Students <br>
+							<b>Number of Students attended:</b>15<br>
+							<b>Status:</b>Completed</h4>
+						<h4 class="quotes"><b>Event Name:</b> <br>
+							SDP(Student Development Programme): <br>
+							Hands-on session on Hadoop - Sem 4 - by Mr.ShyamSunder, <br>
+							Research Scholar,NAL,Bangalore<br>
+							<b>Date:</b>21-03-2018 <br>
+							<b>Designation:</b>Students <br>
+							<b>Number of Students attended:</b>80<br>
+							<b>Status:</b>Completed</h4>
+						<h4 class="quotes"><b>Event Name:</b> <br>
+							Students are participating in Deep Learning <br>
+							and Big Data Workshop at Mount Carmel College<br>
+							<b>Date:</b> <br> 24-03-2018 <br> 23-03-2018 <br>
+							<b>Designation:</b>Students <br>
+							<b>Number of Students attended:</b>04<br>
+							<b>Status:</b>Completed</h4>
+						<h4 class="quotes"><b>Event Name:</b> <br>
+							Sahyog - CSR Event <br>
+							<b>Date:</b> <br> 28-03-2018 <br>
+							<b>Designation:</b>Students <br>
+							<b>Number of Students attended:</b>44<br>
+							<b>Status:</b>Completed</h4>
+						<h4 class="quotes"><b>Event Name:</b> <br>
+							TechTalk <br>
+							<b>Date:</b> <br> 05-04-2018 <br>
+							<b>Designation:</b>Students <br>
+							<b>Number of Students attended:</b>20<br>
+							<b>Status:</b>Completed</h4>
+						<h4 class="quotes"><b>Event Name:</b> <br>
+							Mini Project Evaluation <br>
+							<b>Date:</b> <br> 20-04-2018 <br>
+							<b>Designation:</b>Students <br>
+							<b>Number of Students attended:</b>20<br>
+							<b>Status:</b>Completed</h4>
+						<h4 class="quotes"><b>Event Name:</b> <br>
+							Technical Quiz <br>
+							<b>Date:</b> <br> 03-07-2018 <br>
+							<b>Designation:</b>Students <br>
+							<b>Number of Students attended:</b>20<br>
+							<b>Status:</b>Completed</h4>
+						<pre><input id="prev" type="button" value="Prev" />                                                                                                                                               <input id="next" type="button" value="Next" /></pre>
+
+
+					</td>
+				</tr>
+
+				<tr>
+					<td style="width:100%">
+						<h2 style="color:green">Upcoming Events Details</h2>
+
+						<h4 class="quotes1"><b>Event Name:</b> <br>
+							Technical Quiz <br>
+							<b>Date:</b> <br> 20-09-2018 <br>
+							<b>Designation:</b>Students <br>
+							<b>Number of Students attended:</b>00<br>
+							<b>Status:</b>Upcoming</h4>
+
+						<pre><input id="prev" type="button" value="Prev" />                                                                                                                                               <input id="next" type="button" value="Next" /></pre></span>
+						</p>
+
+					</td>
+				</tr>
+			</table>
+
+		</div>
+	</div>
+	<!--//events-->
+
+
+	<!--  gallery -->
+	<div class="portfolio-agileinfo" id="gallery">
+		<div class="container">
+			<div class="wthree_head_section_gallery">
+				<h3 class="w3l_header w3_agileits_header">Our Gallery</h3>
+			</div>
+
+			<hr style=" border-width: 3px; border-style: inset;">
+			<table>
+				<tr>
+					<td style="padding:10px">
+						<a href="images/aa.JPG"> <img class="cmr1" src="images/aa.JPG" alt="" style="width:auto;height: 250px;"></a>
+						</a> </td>
+
+					<td style="padding:10px">
+						<a href="images/g1.jpg"><img class="cmr1" src="images/g1.jpg" alt="" style="width:100%;height: 250px;">
+						</a> </td>
+					<td style="padding:10px">
+						<a href="images/g2.jpg"> <img class="cmr1" src="images/g2.jpg" alt="" style="width:100%;height: 250px;">
+						</a> </td>
+					<td style="padding:10px">
+						<a href="images/g3.jpg"> <img class="cmr1" src="images/g3.jpg" alt="" style="width:100%;height: 250px;">
+						</a> </td>
+
+				</tr>
+				<tr>
+					<td style="padding:10px">
+						<a href="images/g5.jpg"> <img class="cmr1" src="images/g5.jpg" alt="" style="width:100%;height: 250px;">
+						</a> </td>
+
+					<td style="padding:10px">
+						<a href="images/g4.jpg"> <img class="cmr1" src="images/g4.jpg" alt="" style="width:100%;height: 250px;">
+						</a> </td>
+					<td style="padding:10px">
+						<a href="images/g6.jpg"> <img class="cmr1" src="images/g6.jpg" alt="" style="width:100%;height: 250px;">
+						</a> </td>
+					<td style="padding:10px">
+						<a href="images/s1.jpg"> <img class="cmr1" src="images/s1.jpg" alt="" style="width:100%;height: 250px;">
+						</a></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<hr>
+	<!--//Gallery-->
+
+
+	<!-- about -->
+	<div class="about" id="about">
+		<div class="container">
+			<div class="about-agileits-title">
+				<h3>About us</h3>
+			</div>
+			<hr style=" border-width: 3px; border-style: inset;">
+			<div class="w3ls-about-grids">
+				<div class="col-md-6 w3l-about-img">
+					<img src="images/about1.jpg" alt="image">
+				</div>
+				<div class="col-md-6 w3l-about-left">
+					<i class="fa fa-globe" aria-hidden="true"></i>
+					<h2>Welcome</h2>
+					<h5>CMRIT College</h5>
+					<p>CMRIT is not just a college. It’s a community of pro-active students with ambitious dreams. A dream of a bright
+						future.
+						A dream of a successful life.
+						<span>And we, at CMRIT, provide our students with all the necessary tools and guidance to convert these dreams
+							into actions.
+						</span>
+					</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //about -->
+
+	<!-- contact -->
+
+	<div class="contact" id="contact">
+		<div class="container">
+			<h3>Contact</h3>
+			<hr style=" border-width: 3px; border-style: outset;">
+			<div class="col-md-6 w3-left-contact">
+				<div class="agile-sub-left">
+					<p>CMR Institute of Technology
+						<br>
+						<span>132 AECS Layout</span>
+						<br> Bangalore 560037, India</p>
+
+					<ul>
+						<li>+91 80 28524466 </li>
+						<li>+91 80 28524477 </li>
+					</ul>
+
+
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+
+		</div>
+	</div>
+
+	<!-- contact -->
+
+	<!-- contact -->
+	<div class="contact1" id="mail">
+		<div class="container">
+			<div class="map-pos">
+				<div class="col-md-4 address-row">
+					<div class="col-xs-2 address-left">
+						<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+					</div>
+					<div class="col-xs-10 address-right">
+						<h5>Visit Us</h5>
+						<a href="http://www.cmrit.ac.in/">
+							<p>CMR Institute of Technology,Bangalore</p>
+						</a>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-4 address-row w3-agileits">
+					<div class="col-xs-2 address-left">
+						<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+					</div>
+
+					<div class="col-xs-10 address-right">
+						<h5>Mail Us</h5>
+						<a href="mailto:asth17mca@cmrit.ac.in">
+							<p>
+								asth17mca@cmrit.ac.in
+							</p>
+						</a>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-4 address-row">
+					<div class="col-xs-2 address-left">
+						<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+					</div>
+					<div class="col-xs-10 address-right">
+						<h5>Call Us</h5>
+						<a href="tel:+8028524466">
+							<p>+91 80 28524466</p>
+						</a>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<!--<i><a href="mailto:ankitsinghmyself@gmail.com" target="_blank">hi</a></i>-->
+			<form action="mailto:ankitsinghmyself@gmail.com" target="_blank" method="post" enctype="text/plain">
+				<div class="col-sm-6 contact-left">
+					<input type="text" name="Name" placeholder="Your Name" required="">
+					<input type="email" name="Email" placeholder="Email" required="">
+					<input type="text" name="Mobile Number" placeholder="Mobile Number" required="">
+				</div>
+				<div class="col-sm-6 contact-right">
+					<textarea name="Message" placeholder="Message" required=""></textarea>
+					<input type="submit" value="Submit" onsubmit="return confirm('We will response soon')">
+				</div>
+				<div class="clearfix"></div>
+			</form>
+		</div>
+	</div>
+	<!-- //contact -->
+	<div class="copyright">
+		<div class="container">
+			<p>© 2018 MCA Student Clubs. All rights reserved | Design by
+				<a href="https://plus.google.com/u/0/+AnkitSinghmyself">Ankit & Astha Singh</a>
+			</p>
+		</div>
+	</div>
+
+
+
+	<!-- js for portfolio  -->
+	<script src="js/jquery.chocolat.js "></script>
+	<link rel="stylesheet " href="css/chocolat.css " type="text/css" media="all" />
+	<!--light-box-files -->
+	<script type="text/javascript">
+		$(function () {
+			$('.portfolio-grids a').Chocolat();
+		});
+	</script>
+	<!-- /js for portfolio  -->
+
+	<!-- start-smoth-scrolling -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+			});
+		});
+	</script>
+	<!-- start-smoth-scrolling -->
+	<!-- for bootstrap working -->
+	<script src="js/bootstrap.js"></script>
+	<!-- //for bootstrap working -->
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+		});
+	</script>
+	<!-- //here ends scrolling icon -->
+</body>
+
+</html>
